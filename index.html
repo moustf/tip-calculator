@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/Mustafa-Salem-logos_white_edited.png"
+    />
+    <!-- The font family from google fonts library -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- The main style sheet. -->
+    <link rel="stylesheet" href="./styles/main.css" />
+    <title>Tip Calculator | Mussal</title>
+  </head>
+  <body>
+    <div class="container">
+      <section class="title">
+        <h1 class="first-part">SPLI</h1>
+        <h1 class="second-part">TTER</h1>
+      </section>
+      <main class="tip-calculator">
+        <section class="data-taking">
+          <div class="bill">
+            <h2 class="text">Bill</h2>
+            <label for="bill" style="display: none"></label>
+            <span class="error">Can't be zero!</span>
+            <input type="number" name="bill" id="bill" placeholder="0" />
+            <img src="./images/icon-dollar.svg" alt="dollar sign" />
+          </div>
+          <div class="tip-ratio">
+            <h2 class="percentage">Select Tip %</h2>
+            <div class="ratios">
+              <button class="5-ratio">5%</button>
+              <button class="10-ratio">10%</button>
+              <button class="15-ratio">15%</button>
+              <button class="25-ratio">25%</button>
+              <button class="50-ratio">50%</button>
+              <label for="cusom" style="display: none"></label>
+              <span class="error">Can't be zero!</span>
+              <input
+                type="number"
+                name="custom"
+                id="custom"
+                placeholder="custom"
+              />
+            </div>
+          </div>
+          <div class="num-of-ppl">
+            <h2 class="text">Number of People</h2>
+            <label for="ppl" style="display: none"></label>
+            <span class="error">Can't be zero!</span>
+            <input type="number" name="ppl" id="ppl" placeholder="0" />
+            <img src="./images/icon-person.svg" alt="person icon" />
+          </div>
+        </section>
+        <section class="calc-box">
+          <div class="tip-result-cont">
+            <h1 class="tip-amount">Tip Amount</h1>
+            <p class="each-person">/ person</p>
+            <p class="tip-result">$0.00</p>
+          </div>
+          <div class="total-amount-cont">
+            <h1 class="total-amount">Total</h1>
+            <p class="each-person">/ person</p>
+            <p class="total-result">$0.00</p>
+          </div>
+          <button class="reset" type="button">RESET</button>
+        </section>
+      </main>
+    </div>
+    <script src="./JavaScript/index.js"></script>
+  </body>
+</html>
