@@ -2,8 +2,24 @@
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   scroll-behavior: smooth;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+button {
+  cursor: pointer;
 }
 
 /* Start the design for mobile screens. */
@@ -21,14 +37,14 @@ body {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   background-color: #c5e4e7;
 }
 
@@ -40,14 +56,14 @@ body {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   letter-spacing: 0.8em;
   color: #00494d;
   opacity: 0.8;
@@ -70,11 +86,11 @@ body {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
 .container .tip-calculator .data-taking .bill {
@@ -83,9 +99,9 @@ body {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: auto 1fr 1fr;
-      grid-template-columns: auto 1fr 1fr;
+  grid-template-columns: auto 1fr 1fr;
   -ms-grid-rows: auto 1fr;
-      grid-template-rows: auto 1fr;
+  grid-template-rows: auto 1fr;
 }
 
 .container .tip-calculator .data-taking .bill .text {
@@ -159,10 +175,10 @@ body {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
 .container .tip-calculator .data-taking .tip-ratio .ratios button,
@@ -210,9 +226,9 @@ body {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: auto 1fr 1fr;
-      grid-template-columns: auto 1fr 1fr;
+  grid-template-columns: auto 1fr 1fr;
   -ms-grid-rows: auto 1fr;
-      grid-template-rows: auto 1fr;
+  grid-template-rows: auto 1fr;
 }
 
 .container .tip-calculator .data-taking .num-of-ppl .text {
@@ -272,21 +288,21 @@ body {
 .container .tip-calculator .calc-box {
   width: 108.5%;
   -webkit-transform: translateX(-4%);
-          transform: translateX(-4%);
+  transform: translateX(-4%);
   height: 32.5%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   background-color: #00494d;
   border-radius: 1rem;
   padding: 1rem;
@@ -298,10 +314,10 @@ body {
   height: 30%;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[3];
-      grid-template-columns: repeat(3, 1fr);
+  -ms-grid-columns: (1fr) [3];
+  grid-template-columns: repeat(3, 1fr);
   -ms-grid-columns: 1fr auto;
-      grid-template-columns: 1fr auto;
+  grid-template-columns: 1fr auto;
 }
 
 .container .tip-calculator .calc-box div h1 {
@@ -351,4 +367,114 @@ body {
 }
 
 /* End the design for mobile screens. */
+/* Start the styles for the desktop screens */
+@media only screen and (min-width: 950px) {
+  .container {
+    gap: 3rem;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+  }
+  .container .title {
+    margin-top: 3rem;
+  }
+  .container .tip-calculator {
+    width: 50%;
+    height: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border-radius: 1rem;
+    padding: 1.5rem;
+  }
+  .container .tip-calculator .data-taking {
+    width: 52%;
+    height: 95%;
+  }
+  .container .tip-calculator .data-taking .bill .text {
+    font-size: small;
+  }
+  .container .tip-calculator .data-taking .bill #bill {
+    height: 2.5rem;
+  }
+  .container .tip-calculator .data-taking .bill img {
+    width: 12px;
+    background-color: #f4fafa;
+  }
+  .container .tip-calculator .data-taking .tip-ratio {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .container .tip-calculator .data-taking .tip-ratio .percentage {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    margin-bottom: 0;
+    font-size: small;
+    margin-bottom: 1rem;
+  }
+  .container .tip-calculator .data-taking .tip-ratio .ratios button,
+  .container .tip-calculator .data-taking .tip-ratio .ratios input {
+    width: calc((100% / 3) - 1rem);
+    height: 2.5rem;
+  }
+  .container .tip-calculator .data-taking .tip-ratio .ratios #custom {
+    padding: 0 0.5rem 0 0;
+    font-size: large;
+  }
+  .container .tip-calculator .data-taking .num-of-ppl {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .container .tip-calculator .data-taking .num-of-ppl .text {
+    font-size: small;
+  }
+  .container .tip-calculator .data-taking .num-of-ppl #ppl {
+    height: 2.5rem;
+  }
+  .container .tip-calculator .data-taking .num-of-ppl img {
+    width: 12px;
+    background-color: #f4fafa;
+  }
+  .container .tip-calculator .calc-box {
+    width: 45%;
+    height: 95%;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    margin-top: 0;
+    padding: 1.5rem;
+  }
+  .container .tip-calculator .calc-box h1 {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    font-size: small !important;
+  }
+  .container .tip-calculator .calc-box p:not(:last-child) {
+    margin-top: -1.5rem;
+    font-size: x-small;
+  }
+  .container .tip-calculator .calc-box p + p {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    font-weight: 700;
+  }
+  .container .tip-calculator .calc-box .total-amount-cont {
+    margin-top: -3rem;
+  }
+  .container .tip-calculator .calc-box .reset {
+    height: 2.5rem;
+  }
+}
+
+/* End the styles for the desktop screens */
 /*# sourceMappingURL=main.css.map */
