@@ -225,3 +225,101 @@ body {
 }
 
 /* End the design for mobile screens. */
+
+/* Start the styles for the desktop screens */
+
+@media only screen and (min-width: 950px) {
+  .container {
+    gap: 3rem;
+    justify-content: flex-start;
+    .title {
+      margin-top: 3rem;
+    }
+    .tip-calculator {
+      width: 50%;
+      height: 50%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-radius: 1rem;
+      padding: 1.5rem;
+      .data-taking {
+        width: 52%;
+        height: 95%;
+        .bill {
+          .text {
+            font-size: small;
+            // margin-bottom: 0;
+          }
+          #bill {
+            height: 2.5rem;
+          }
+          img {
+            width: 12px;
+            background-color: #{$veryLightGrayishCyan};
+          }
+        }
+        .tip-ratio {
+          height: fit-content;
+          .percentage {
+            height: fit-content;
+            margin-bottom: 0;
+            font-size: small;
+            margin-bottom: 1rem;
+          }
+          .ratios {
+            button,
+            input {
+              width: calc((100% / 3) - 1rem);
+              height: 2.5rem;
+            }
+            #custom {
+              padding: 0 0.5rem 0 0;
+              font-size: large;
+            }
+          }
+        }
+        .num-of-ppl {
+          height: fit-content;
+          .text {
+            font-size: small;
+          }
+          #ppl {
+            height: 2.5rem;
+          }
+          img {
+            width: 12px;
+            background-color: #{$veryLightGrayishCyan};
+          }
+        }
+      }
+      .calc-box {
+        width: 45%;
+        height: 95%;
+        transform: translateX(0);
+        margin-top: 0;
+        padding: 1.5rem;
+        h1 {
+          height: fit-content;
+          font-size: small !important;
+        }
+        p:not(:last-child) {
+          margin-top: -1.5rem;
+          font-size: x-small;
+        }
+        p + p {
+          height: fit-content;
+          font-weight: 700;
+        }
+        .total-amount-cont {
+          margin-top: -3rem;
+        }
+        .reset {
+          height: 2.5rem;
+        }
+      }
+    }
+  }
+}
+
+/* End the styles for the desktop screens */
