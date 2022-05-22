@@ -1,0 +1,354 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+/* Start the design for mobile screens. */
+body {
+  width: 100%;
+  height: 100vh;
+  font-family: "Space Mono", monospace;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #c5e4e7;
+}
+
+.container .title {
+  height: 18vh;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  letter-spacing: 0.8em;
+  color: #00494d;
+  opacity: 0.8;
+}
+
+.container .tip-calculator {
+  height: 82vh;
+  width: 100%;
+  padding: 1rem 1rem 0rem 1rem;
+  background-color: white;
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+}
+
+.container .tip-calculator .data-taking {
+  width: 100;
+  height: 65%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.container .tip-calculator .data-taking .bill {
+  width: 100%;
+  height: 20%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto 1fr 1fr;
+      grid-template-columns: auto 1fr 1fr;
+  -ms-grid-rows: auto 1fr;
+      grid-template-rows: auto 1fr;
+}
+
+.container .tip-calculator .data-taking .bill .text {
+  font-size: larger;
+  margin-bottom: 0.5rem;
+  color: #5e7a7d;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-area: 1 / 1 / 2 / 2;
+}
+
+.container .tip-calculator .data-taking .bill .error {
+  width: 9rem;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-area: 1 / 3 / 2 / 4;
+  color: red;
+  display: none;
+}
+
+.container .tip-calculator .data-taking .bill #bill {
+  font-family: "Space Mono", monospace;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: 2 / 1 / 3 / 4;
+  direction: rtl;
+  font-size: 1.5rem;
+  background-color: #f4fafa;
+  padding: 0 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 700;
+}
+
+.container .tip-calculator .data-taking .bill #bill:focus {
+  outline-color: #26c0ab;
+}
+
+.container .tip-calculator .data-taking .bill img {
+  width: 16px;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-area: 2 / 1 / 3 / 2;
+  margin: 0.8rem 0 0 1rem;
+}
+
+.container .tip-calculator .data-taking .tip-ratio {
+  width: 100%;
+  height: 50%;
+  display: -ms-grid;
+  display: grid;
+}
+
+.container .tip-calculator .data-taking .tip-ratio .percentage {
+  font-size: larger;
+  margin-bottom: 0.5rem;
+  color: #5e7a7d;
+}
+
+.container .tip-calculator .data-taking .tip-ratio .ratios {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.container .tip-calculator .data-taking .tip-ratio .ratios button,
+.container .tip-calculator .data-taking .tip-ratio .ratios input {
+  height: 3rem;
+  width: calc((100% / 2) - 0.5rem);
+  margin-top: 0.5rem;
+  font-family: "Space Mono", monospace;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 700;
+}
+
+.container .tip-calculator .data-taking .tip-ratio .ratios button {
+  background-color: #00494d;
+  color: #f4fafa;
+}
+
+.container .tip-calculator .data-taking .tip-ratio .ratios button:active {
+  background-color: #26c0ab;
+  color: #5e7a7d;
+}
+
+.container .tip-calculator .data-taking .tip-ratio .ratios button:hover {
+  background-color: #c5e4e7;
+  color: #5e7a7d;
+}
+
+.container .tip-calculator .data-taking .tip-ratio .ratios input {
+  background-color: #f4fafa;
+  color: #5e7a7d;
+  direction: rtl;
+  padding: 0 1rem;
+  font-weight: 700;
+}
+
+.container .tip-calculator .data-taking .tip-ratio .ratios input:focus {
+  outline-color: #26c0ab;
+}
+
+.container .tip-calculator .data-taking .num-of-ppl {
+  width: 100%;
+  height: 20%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto 1fr 1fr;
+      grid-template-columns: auto 1fr 1fr;
+  -ms-grid-rows: auto 1fr;
+      grid-template-rows: auto 1fr;
+}
+
+.container .tip-calculator .data-taking .num-of-ppl .text {
+  width: 15rem;
+  font-size: larger;
+  margin-bottom: 0.5rem;
+  color: #5e7a7d;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: 1 / 1 / 2 / 3;
+}
+
+.container .tip-calculator .data-taking .num-of-ppl .error {
+  width: 7rem;
+  font-size: small;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-area: 1 / 3 / 2 / 4;
+  color: red;
+  display: none;
+}
+
+.container .tip-calculator .data-taking .num-of-ppl #ppl {
+  font-family: "Space Mono", monospace;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: 2 / 1 / 3 / 4;
+  direction: rtl;
+  font-size: 1.5rem;
+  background-color: #f4fafa;
+  padding: 0 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 700;
+}
+
+.container .tip-calculator .data-taking .num-of-ppl #ppl:focus {
+  outline-color: #26c0ab;
+}
+
+.container .tip-calculator .data-taking .num-of-ppl img {
+  width: 16px;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-area: 2 / 1 / 3 / 2;
+  margin: 0.8rem 0 0 1rem;
+}
+
+.container .tip-calculator .calc-box {
+  width: 108.5%;
+  -webkit-transform: translateX(-4%);
+          transform: translateX(-4%);
+  height: 32.5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #00494d;
+  border-radius: 1rem;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+.container .tip-calculator .calc-box div {
+  width: 100%;
+  height: 30%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  -ms-grid-columns: 1fr auto;
+      grid-template-columns: 1fr auto;
+}
+
+.container .tip-calculator .calc-box div h1 {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-area: 1 / 1 / 2 / 2;
+  font-size: large;
+  color: #f4fafa;
+}
+
+.container .tip-calculator .calc-box div p {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-area: 2 / 1 / 3 / 2;
+  color: #c5e4e7;
+  font-size: small;
+}
+
+.container .tip-calculator .calc-box div p + p {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-area: 1 / 2 / 3 / 4;
+  color: #26c0ab;
+  font-size: 2rem;
+}
+
+.container .tip-calculator .calc-box button.reset {
+  width: 100%;
+  height: 3rem;
+  background-color: #26c0ab;
+  border: none;
+  border-radius: 0.5rem;
+  color: #00494d;
+  font-weight: 700;
+  font-size: larger;
+  opacity: 0.2;
+}
+
+.container .tip-calculator .calc-box button.reset:hover {
+  background-color: #c5e4e7;
+}
+
+/* End the design for mobile screens. */
+/*# sourceMappingURL=main.css.map */
