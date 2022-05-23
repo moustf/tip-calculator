@@ -55,6 +55,7 @@ function tipCalc() {
   const totalPerson = billAmount / numOfPpl + tipPerson;
   totalResult.textContent = `$${Number.parseFloat(totalPerson).toFixed(2)}`;
   tipResult.textContent = `$${Number.parseFloat(tipPerson).toFixed(2)}`;
+  resetButton.style.opacity = 1;
 }
 
 // ? Added the event listener to the div and called the function.
