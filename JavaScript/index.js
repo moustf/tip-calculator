@@ -78,3 +78,7 @@ function resetAll() {
   totalResult.textContent = `$0.00`;
   resetButton.style.opacity = 0.3;
 }
+
+// ? Targeting the elements of the animation.
+const spanAnimOne = document.querySelector(".top-animation");
+const spanAnimTwo = document.querySelector(".right-animation");
