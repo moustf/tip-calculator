@@ -64,3 +64,17 @@ tipCalculatorDiv.addEventListener("click", (e) => {
     tipCalc();
   }
 });
+
+// ? Added the event listener to the reset button.
+resetButton.addEventListener("click", resetAll);
+
+// ? Creating the function that is responsible for resetting the inputs and the result paras.
+function resetAll() {
+  billInput.value = "";
+  customInput.value = "";
+  peopleInput.value = "";
+  ratio = null;
+  tipResult.textContent = `$0.00`;
+  totalResult.textContent = `$0.00`;
+  resetButton.style.opacity = 0.3;
+}
