@@ -82,3 +82,41 @@ function resetAll() {
 // ? Targeting the elements of the animation.
 const spanAnimOne = document.querySelector(".top-animation");
 const spanAnimTwo = document.querySelector(".right-animation");
+
+// ? Set the width and height variables
+let widthCount = 70;
+let heightCount = 50;
+
+// ? Created the animation function.
+function animate() {
+  if (widthCount <= 790) {
+    moveWidth();
+    requestAnimationFrame(animate);
+  }
+  if (heightCount <= 390) {
+    moveHeight();
+    requestAnimationFrame(animate);
+  }
+}
+
+// ? Call the animation function for the first time on the page.
+animate();
+
+// ? Created the function that is responsible for raising the width.
+function moveWidth() {
+  spanAnimOne.style.width = `${widthCount}px`;
+  widthCount += 0.01;
+}
+
+// ? Created the function that is responsible for raising the height.
+function moveHeight() {
+  spanAnimTwo.style.height = `${heightCount}px`;
+  heightCount += 0.01;
+}
+
+// ? Added a setInterval function to repeat the animation.
+setInterval(() => {
+  widthCount = 70;
+  heightCount = 50;
+  animate();
+}, 1800);
