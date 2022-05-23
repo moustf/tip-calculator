@@ -47,3 +47,19 @@ customInput.addEventListener("blur", (event) => {
   ratio = Number(event.target.value) / 100;
 });
 
+// ? Created the function that is responsible for calculating the tip amount and the total per person
+function tipCalc() {
+  const billAmount = Number.parseFloat(billInput.value);
+  const numOfPpl = Number.parseInt(peopleInput.value);
+  const tipPerson = (billAmount * ratio) / numOfPpl;
+  const totalPerson = billAmount / numOfPpl + tipPerson;
+  totalResult.textContent = `$${Number.parseFloat(totalPerson).toFixed(2)}`;
+  tipResult.textContent = `$${Number.parseFloat(tipPerson).toFixed(2)}`;
+}
+
+// ? Added the event listener to the div and called the function.
+tipCalculatorDiv.addEventListener("click", (e) => {
+  if (ratio > 0 && billInput.value > 0 && peopleInput.value > 0) {
+    tipCalc();
+  }
+});
