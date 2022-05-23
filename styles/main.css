@@ -69,6 +69,11 @@ body {
   opacity: 0.8;
 }
 
+.container .top-animation,
+.container .right-animation {
+  display: none;
+}
+
 .container .tip-calculator {
   height: 82vh;
   width: 100%;
@@ -374,9 +379,30 @@ body {
     -webkit-box-pack: start;
     -ms-flex-pack: start;
     justify-content: flex-start;
+    position: relative;
   }
   .container .title {
     margin-top: 3rem;
+  }
+  .container .top-animation,
+  .container .right-animation {
+    display: block;
+    background-color: #00494d;
+    position: absolute;
+  }
+  .container .top-animation {
+    width: 70px;
+    height: 20px;
+    left: 22.8rem;
+    top: 13.3rem;
+  }
+  .container .right-animation {
+    -webkit-transform: scaleY(-1);
+    transform: scaleY(-1);
+    width: 20px;
+    height: 50px;
+    left: 22.8rem;
+    top: 14.5rem;
   }
   .container .tip-calculator {
     width: 50%;
