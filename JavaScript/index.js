@@ -10,6 +10,8 @@ const fiftyButton = document.querySelector(".fifty-ratio");
 const tipResult = document.querySelector(".tip-result");
 const totalResult = document.querySelector(".total-result");
 const resetButton = document.querySelector(".reset");
+const ratiosDiv = document.querySelector(".ratios");
+const tipCalculatorDiv = document.querySelector(".tip-calculator");
 
 // ? Adding the event listener to the bill input field.
 billInput.onblur = function () {
@@ -31,3 +33,17 @@ function zeroError(ele) {
   const parent = ele.parentElement;
   parent.querySelector(".error").style.display = "block";
 }
+
+// ? Created the ratio variable at the global scoop to access it from anywhere.
+let ratio = null;
+
+// ? Get the ratios value from buttons.
+ratiosDiv.addEventListener(`click`, function (e) {
+  ratio = Number(e.target.value) / 100;
+});
+
+// ? Get the ratios value from custom ratio input.
+customInput.addEventListener("blur", (event) => {
+  ratio = Number(event.target.value) / 100;
+});
+
